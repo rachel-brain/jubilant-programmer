@@ -39,7 +39,11 @@ const LI = styled.li`
 	font-family: 'Nunito Sans', sans-serif;
 `;
 
-const label = styled.label``;
+const label = styled.label`
+	font-size: 2rem;
+	line-height: 120%;
+	font-family: 'Nunito Sans', sans-serif;
+	`;
 
 export {
 	H1,

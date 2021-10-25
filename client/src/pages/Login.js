@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../gql/mutations';
 import Auth from '../utils/auth';
@@ -15,6 +16,7 @@ function Login(props) {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(formState);
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });

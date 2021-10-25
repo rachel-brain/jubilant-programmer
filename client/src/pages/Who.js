@@ -23,7 +23,7 @@ const Who = () => {
         <br />
       <H2>Who we are</H2>
         <div className='photo'>
-        <img src={ victor } height={200} width={200} alt='victors alter-ego' />
+        <img src={ victor } height={200} width={190} alt='victors alter-ego' />
         </div>
         <H2>Victor Hartig</H2>
         <H3>Managing Director</H3>
@@ -31,7 +31,7 @@ const Who = () => {
         <P className='who-blurb'><b>Mobile:</b> 0403 525 118</P>
         <br />
         <div className='photo'>
-        <img src={ rachel } height={200} width={200} alt='victors alter-ego' />
+        <img src={ rachel } height={200} width={190} alt='victors alter-ego' />
         </div>
         <H2>Rachel Brain</H2>
         <H3>Head of Sales and Marketing</H3>

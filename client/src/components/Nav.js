@@ -1,5 +1,6 @@
 import React from "react";
 import Auth from "../utils/auth";
+import logo from '../images/Pastry_Master_CMYK_small.png';
 import { Link } from "react-router-dom";
 import { color, shape } from '../styles';
 
@@ -35,7 +36,7 @@ const NavigationItem = styled.li`
 	}
 
 	&:hover {
-		background: ${color.backgroundLight};
+		background: ${color.backgroundMedium};
 	}
 `;
 
@@ -72,6 +73,7 @@ function Nav() {
   return (
     <Header>
 		<StyledNav>
+		<img src={ logo } height={200} width={260} alt='pastry master logo' />
 			<NavigationList>
 				<NavigationItem>
 					<Link to="/">
@@ -114,5 +116,7 @@ function Nav() {
     </Header>
   );
 }
+
+// export default AuthNav;
 
 export default Nav;

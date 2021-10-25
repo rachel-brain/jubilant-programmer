@@ -1,31 +1,109 @@
-import React from 'react';
+import { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-import { Container } from "../components/Container";
+import { Container } from '../components/Container';
 import { H2 } from '../components/Text';
 import { H3 } from '../components/Text';
-import { P } from '../components/Text';
+import { Input } from '../components/Input';
+import { Button } from '../components/Button';
 
-const Contact = () => {
+function Contact () {
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    alert("Thank you, " + inputs.name + ".  We will be in contact with you within 24 hours.");
+  };
+
   return (
-    <Container alignContent="center">
+    <Container alignContent='center'>
+      <div>
       <H2>Make Contact with us</H2>
-      <H3>Existing customer? Sign up or Log in here:</H3>
-      {/* Add 1st Form here  */}
-      <P className='form-blurb' >
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur. 
-      </P>
+      <H3>Note that we currently only deliver within the state of Victoria, Australia.</H3>
+      <H3>Whether you are an existing customer or not, please get in touch using the form below.</H3>
       <br />
-      <H3>Not a customer yet?  Get in touch here to request a free sample roll of pastry and try it for yourself.</H3>
-      {/* Add 2nd Form here  */}
-      <P className='form-blurb' >
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur. 
-      </P>
-  </Container>   
+      <form onSubmit={handleFormSubmit}>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="name">Your name: </label>
+        <input
+          placeholder="Required*"
+          name="name"
+          type="text"
+          id="name"
+          value={inputs.name || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="business">Your Business name: </label>
+        <input
+          placeholder="Required*"
+          name="business"
+          type="text"
+          id="business"
+          value={inputs.business || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="suburb">Your delivery Suburb: </label>
+        <input
+          placeholder="Required*"
+          name="suburb"
+          type="text"
+          id="suburb"
+          value={inputs.suburb || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="email">Your Email address: </label>
+        <input
+          placeholder="Required*"
+          name="email"
+          type="text"
+          id="email"
+          value={inputs.email || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="phone">Your Phone number: </label>
+        <input
+          placeholder="Optional"
+          name="phone"
+          type="number"
+          id="phone"
+          value={inputs.phone || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row space-between my-2'>
+        <label htmlFor="queries">Your queries here: </label>
+        <input
+          placeholder="Required*"
+          name="queries"
+          type="text"
+          id="queries"
+          value={inputs.queries || ""} 
+          onChange={handleChange}
+        />
+      </div>
+      <div className='flex-row flex-end'>
+        <Button type="submit">Submit enquiry</Button>
+      </div>
+      </form>
+    </div>
+    </Container>
   );
-};
+}
+
+ReactDOM.render(<Contact />, document.getElementById('root'));
 
 export default Contact;

@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Customer, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
+
+// THIS IS WHERE I ADD STRIPE!!!
 
 const resolvers = {
   Query: {
