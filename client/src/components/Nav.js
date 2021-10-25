@@ -29,7 +29,7 @@ const NavigationItem = styled.li`
 	border-radius: ${shape.borderRadius};
 
 	a {
-		color: ${color.textDark};
+		color: ${color.textSunset};
 		text-decoration: none;
 		font-size: 1.6rem;
 	}
@@ -44,7 +44,6 @@ function AuthNav() {
 		return (
 			<NavigationList float="right">
 				<NavigationItem>
-					{/* this is not using the Link component to logout or user and then refresh the application to the start */}
 					<a href="/" onClick={() => Auth.logout()}>
 						Logout
 					</a>
@@ -77,6 +76,36 @@ function Nav() {
 				<NavigationItem>
 					<Link to="/">
 						Home
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/about">
+						About
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/products">
+						Products
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/delivery">
+						Delivery
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/testimonials">
+						Testimonials
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/who">
+						Who we are
+					</Link>
+				</NavigationItem>
+				<NavigationItem>
+					<Link to="/contact">
+						Contact us
 					</Link>
 				</NavigationItem>
 			</NavigationList>
