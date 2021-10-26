@@ -125,9 +125,6 @@ db.once('open', async () => {
     email: 'admin@vicfooddist.com.au',
     password: 'password99',
     channel: 'Distributor',
-    orders: [{
-      products: [products[0]._id, products[8]._id, products[12]._id]
-    }]
   });
 
   await Customer.create({
@@ -136,9 +133,6 @@ db.once('open', async () => {
     email: 'info@surreyfoodstore.com.au',
     password: 'pword1978',
     channel: 'Direct',
-    orders: [{
-      products: [products[0]._id, products[4]._id, products[1]._id]
-    }]
   });
 
   await Customer.create({
@@ -147,9 +141,6 @@ db.once('open', async () => {
     email: 'josh@artisangourmetfoods.com.au',
     password: 'password987',
     channel: 'Direct',
-    orders: [{
-      products: [products[5]._id, products[4]._id, products[12]._id]
-    }]
   });
 
   await Customer.create({
@@ -158,9 +149,6 @@ db.once('open', async () => {
     email: 'info@superpiesco.com.au',
     password: 'hello2000',
     channel: 'Special',
-    orders: [{
-      products: [products[2]._id, products[4]._id, products[6]._id]
-    }]
   });
 
   console.log('Customers seeded');

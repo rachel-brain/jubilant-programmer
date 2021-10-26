@@ -12,7 +12,7 @@ const Button = styled.button`
 
 	&:hover {
 		cursor: pointer;
-		background-color: ${color.backgroundMedium};
+		background-color: ${color.textSunset};
 	}
 `;
 

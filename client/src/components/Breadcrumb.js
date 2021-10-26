@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { color, shape } from '../styles';
 
-const BreakcrumbWrapper = styled.div`
+const BreadcrumbWrapper = styled.div`
 	padding: 10px 20px;
 	background: ${color.backgroundMedium};
 
@@ -22,9 +22,9 @@ const Breadcrumb = ({
 	text
 }) => {
 	return (
-		<BreakcrumbWrapper>
+		<BreadcrumbWrapper>
 			<Link to={location}>{text}</Link>
-		</BreakcrumbWrapper>
+		</BreadcrumbWrapper>
 	)
 }
 

@@ -5,6 +5,7 @@ import { LOGIN } from '../gql/mutations';
 import Auth from '../utils/auth';
 
 import { Container } from "../components/Container";
+import { Footer } from '../components/Footer';
 import { H2 } from '../components/Text';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { Button } from '../components/Button';
@@ -70,6 +71,7 @@ function Login(props) {
             <Button type="submit">Submit</Button>
           </div>
         </form>
+        <Footer alignContent='center' />
       </Container>
     </>
   );

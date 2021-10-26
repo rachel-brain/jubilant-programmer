@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container } from "../components/Container";
+import { Footer } from '../components/Footer';
 import { H2 } from '../components/Text';
 import { P } from '../components/Text';
 
@@ -19,7 +20,8 @@ const Delivery = () => {
       Type in your address here and we’ll show you who to contact to deliver to you: 
       </P>
       {/* Add Form here */}
-  </Container>   
+      <Footer alignContent='center' />
+    </Container>   
   );
 };
 

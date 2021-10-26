@@ -3,6 +3,7 @@ import victor from '../images/don-photo.jpeg';
 import rachel from '../images/joan-photo.jpeg';
 
 import { Container } from "../components/Container";
+import { Footer } from '../components/Footer';
 import { H2 } from '../components/Text';
 import { H3 } from '../components/Text';
 import { P } from '../components/Text';
@@ -30,6 +31,7 @@ const Who = () => {
         <P className='who-blurb'>35 years of management in Food Manufacture and Renewable Energy</P>
         <P className='who-blurb'><b>Mobile:</b> 0403 525 118</P>
         <br />
+        <br /> 
         <div className='photo'>
         <img src={ rachel } height={200} width={190} alt='victors alter-ego' />
         </div>
@@ -37,6 +39,7 @@ const Who = () => {
         <H3>Head of Sales and Marketing</H3>
         <P className='who-blurb'>30 years of experience in the Food Industry</P>
         <P className='who-blurb'><b>Mobile:</b> 0432 297 755</P>
+        <Footer alignContent='center' />
     </Container>
   );
 };

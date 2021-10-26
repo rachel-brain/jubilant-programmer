@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container } from "../components/Container";
+import { Footer } from '../components/Footer';
 import { H1 } from '../components/Text';
 import { H2 } from '../components/Text';
 import { P } from '../components/Text';
@@ -32,6 +33,7 @@ const Testimonials = () => {
         molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
         magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur.
         In felis nisl, luctus non ante euismod, tincidunt bibendum mi." - Markus</P>
+        <Footer alignContent='center' />
     </Container>
   );
 };

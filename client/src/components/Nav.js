@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 const Header = styled.header`
 	// padding: 20px;
+	// background: ${color.backgroundDark};
 `;
 
 const StyledNav = styled.nav`

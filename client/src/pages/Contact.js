@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { Container } from '../components/Container';
+import { Footer } from '../components/Footer';
 import { H2 } from '../components/Text';
 import { H3 } from '../components/Text';
 import { Input } from '../components/Input';
@@ -19,6 +20,7 @@ function Contact () {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     alert("Thank you, " + inputs.name + ".  We will be in contact with you within 24 hours.");
+
   };
 
   return (
@@ -31,7 +33,7 @@ function Contact () {
       <form onSubmit={handleFormSubmit}>
       <div className='flex-row space-between my-2'>
         <label htmlFor="name">Your name: </label>
-        <input
+        <Input
           placeholder="Required*"
           name="name"
           type="text"
@@ -42,7 +44,7 @@ function Contact () {
       </div>
       <div className='flex-row space-between my-2'>
         <label htmlFor="business">Your Business name: </label>
-        <input
+        <Input
           placeholder="Required*"
           name="business"
           type="text"
@@ -53,7 +55,7 @@ function Contact () {
       </div>
       <div className='flex-row space-between my-2'>
         <label htmlFor="suburb">Your delivery Suburb: </label>
-        <input
+        <Input
           placeholder="Required*"
           name="suburb"
           type="text"
@@ -64,7 +66,7 @@ function Contact () {
       </div>
       <div className='flex-row space-between my-2'>
         <label htmlFor="email">Your Email address: </label>
-        <input
+        <Input
           placeholder="Required*"
           name="email"
           type="text"
@@ -75,7 +77,7 @@ function Contact () {
       </div>
       <div className='flex-row space-between my-2'>
         <label htmlFor="phone">Your Phone number: </label>
-        <input
+        <Input
           placeholder="Optional"
           name="phone"
           type="number"
@@ -86,7 +88,7 @@ function Contact () {
       </div>
       <div className='flex-row space-between my-2'>
         <label htmlFor="queries">Your queries here: </label>
-        <input
+        <Input
           placeholder="Required*"
           name="queries"
           type="text"
@@ -100,6 +102,7 @@ function Contact () {
       </div>
       </form>
     </div>
+    <Footer alignContent='center' />
     </Container>
   );
 }
