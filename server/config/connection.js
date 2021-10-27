@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-require('dotenv').config()
+require('dotenv').config();
 
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/jubilant-programmer'
 
-console.log('DB URI', dbURI)
+console.log('DB URI', dbURI);
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,

@@ -20,7 +20,7 @@ function Contact () {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     alert("Thank you, " + inputs.name + ".  We will be in contact with you within 24 hours.");
-
+    setInputs("")
   };
 
   return (

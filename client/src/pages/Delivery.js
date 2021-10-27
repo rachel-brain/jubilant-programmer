@@ -17,9 +17,9 @@ const Delivery = () => {
       <H2>Not based in Melbourne Metro?</H2>
       <P className='delivery-blurb'>
         We have a number of distributor partners who may deliver to your area within Victoria.
-      Type in your address here and we’ll show you who to contact to deliver to you: 
+        Send us a query on the Contact page and we’ll let you know who delivers to your area and 
+        we'll even pass your details on to the relevant distributor for you. 
       </P>
-      {/* Add Form here */}
       <Footer alignContent='center' />
     </Container>   
   );
