@@ -28,8 +28,10 @@ type User {
   firstName: String
   email: String
   password: String
+  suburb: String
+  phoneNumber: String
   channels: [Channel]
-  orders: [Order]
+  # orders: [Order]
 }
 
 type Checkout {
