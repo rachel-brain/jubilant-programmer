@@ -60,3 +60,7 @@ Live / In development
 * Email: rachel.brain@internode.on.net
 * LinkedIn: https://www.linkedin.com/in/rachel-brain-89570930
 * GitHub: https://github.com/rachel-brain
+
+
+## Resources
+* To populate the content in the Product cards: https://stackoverflow.com/questions/40195058/populate-material-ui-card-component-in-react-project

@@ -19,8 +19,8 @@ function Contact () {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    alert("Thank you, " + inputs.name + ".  We will be in contact with you within 24 hours.");
-    setInputs("")
+    alert("Thank you, " + inputs.firstName + ".  We will be in contact with you within 24 hours.");
+    setInputs({})
   };
 
   return (
@@ -35,10 +35,10 @@ function Contact () {
         <label htmlFor="name">Your name: </label>
         <Input
           placeholder="Required*"
-          name="name"
+          name="firstName"
           type="text"
           id="name"
-          value={inputs.name || ""} 
+          value={inputs.firstName || ""} 
           onChange={handleChange}
         />
       </div>
@@ -46,10 +46,10 @@ function Contact () {
         <label htmlFor="business">Your Business name: </label>
         <Input
           placeholder="Required*"
-          name="business"
+          name="businessName"
           type="text"
           id="business"
-          value={inputs.business || ""} 
+          value={inputs.businessName || ""} 
           onChange={handleChange}
         />
       </div>

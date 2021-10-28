@@ -4,16 +4,37 @@ const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
+  businessName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  
+  firstName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+
   email: {
     type: String,
     required: true,
     unique: true
   },
+  
   password: {
     type: String,
     required: true,
     minlength: 5
-  }
+  },
+
+  channel: {
+    type: String,
+    required: true,
+    choices: ['Distributor', 'Direct', 'Special']   
+  },
+  
+  // orders: [Order.schema]
 });
 
 // set up pre-save middleware to create password

@@ -12,17 +12,17 @@ const H1 = styled.h1`
 	font-size: 3rem;
 `;
 
-const H2 = styled.h1`
+const H2 = styled.h2`
 	${commonHeadingStyles}
 	font-size: 2.4rem;
 `;
 
-const H3 = styled.h1`
+const H3 = styled.h3`
 	${commonHeadingStyles}
 	font-size: 2rem;
 `;
 
-const H4 = styled.h1`
+const H4 = styled.h4`
 	${commonHeadingStyles}
 	font-size: 1.8rem;
 `;

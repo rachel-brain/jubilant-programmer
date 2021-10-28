@@ -10,7 +10,7 @@ const Input = styled.input `
 	border-radius: ${shape.borderRadius};
     box-sizing: border-box;
 	background: ${color.primary};
-	color: ${color.textSky};
+	color: ${color.textPastry};
 	letter-spacing: 0.1rem;
 
 	&:hover {

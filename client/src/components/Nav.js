@@ -1,7 +1,7 @@
-import React from "react";
-import Auth from "../utils/auth";
+import React from 'react';
+import Auth from '../utils/auth';
 import logo from '../images/Pastry_Master_CMYK_small.png';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { color, shape } from '../styles';
 
 import styled from 'styled-components';

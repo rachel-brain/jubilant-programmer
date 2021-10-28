@@ -1,6 +1,5 @@
 const db = require('./connection');
 
-// A user is defined as a person logging in or signing in to view the website
 const {
   User
 } = require('../models');
@@ -23,15 +22,44 @@ db.once('open', async () => {
     password: 'password246'
   });
 
+  await User.create({
+    businessName: 'Victorian Food Distributors',
+    firstName: 'Amy',
+    email: 'admin@vicfooddist.com.au',
+    password: 'password99',
+    channel: 'Distributor',
+  });
+
+  await User.create({
+    businessName: 'Surrey Food Store',
+    firstName: 'Abby',
+    email: 'info@surreyfoodstore.com.au',
+    password: 'pword1978',
+    channel: 'Direct',
+  });
+
+  await User.create({
+    businessName: 'Artisan Gourmet Foods',
+    firstName: 'Josh',
+    email: 'josh@artisangourmetfoods.com.au',
+    password: 'password987',
+    channel: 'Direct',
+  });
+
+  await User.create({
+    businessName: 'Super Pies Company',
+    firstName: 'Harry',
+    email: 'info@superpiesco.com.au',
+    password: 'hello2000',
+    channel: 'Special',
+  });
+
   console.log('Users seeded');
 
   process.exit();
 });
 
-// A customer is defined as a person getting in contact to request additional information not visible on the public website
 const {
-  Customer,
-  Product,
   Channel
 } = require('../models');
 
@@ -51,6 +79,14 @@ db.once('open', async () => {
 
   console.log('Channels seeded');
 
+  process.exit();
+});
+
+  const {
+    Product
+  } = require('../models');
+  
+  db.once('open', async () => {
   await Product.deleteMany();
 
   const products = await Product.insertMany([{
@@ -116,42 +152,6 @@ db.once('open', async () => {
   ]);
 
   console.log('Products seeded');
-
-  await Customer.deleteMany();
-
-  await Customer.create({
-    businessName: 'Victorian Food Distributors',
-    firstName: 'Amy',
-    email: 'admin@vicfooddist.com.au',
-    password: 'password99',
-    channel: 'Distributor',
-  });
-
-  await Customer.create({
-    businessName: 'Surrey Food Store',
-    firstName: 'Abby',
-    email: 'info@surreyfoodstore.com.au',
-    password: 'pword1978',
-    channel: 'Direct',
-  });
-
-  await Customer.create({
-    businessName: 'Artisan Gourmet Foods',
-    firstName: 'Josh',
-    email: 'josh@artisangourmetfoods.com.au',
-    password: 'password987',
-    channel: 'Direct',
-  });
-
-  await Customer.create({
-    businessName: 'Super Pies Company',
-    firstName: 'Harry',
-    email: 'info@superpiesco.com.au',
-    password: 'hello2000',
-    channel: 'Special',
-  });
-
-  console.log('Customers seeded');
 
   process.exit();
 });

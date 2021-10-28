@@ -1,6 +1,17 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Customer, Product, Category, Order } = require('../models');
-const { signToken } = require('../utils/auth');
+const {
+  AuthenticationError
+} = require('apollo-server-express');
+
+const {
+  User,
+  Product,
+  Category,
+  Order
+} = require('../models');
+
+const {
+  signToken
+} = require('../utils/auth');
 
 // THIS IS WHERE I ADD STRIPE!!! NEED TO CHANGE THIS TOKEN?
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
@@ -30,8 +41,13 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    login: async (parent, {
+      email,
+      password
+    }) => {
+      const user = await User.findOne({
+        email
+      });
 
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
@@ -45,7 +61,10 @@ const resolvers = {
 
       const token = signToken(user);
 
-      return { token, user };
+      return {
+        token,
+        user
+      };
     }
   }
 };
