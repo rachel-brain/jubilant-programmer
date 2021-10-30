@@ -1,4 +1,9 @@
 const db = require('./connection');
+const { Channel } = require('../models');
+const { Enquiry } = require('../models');
+const { Order } = require('../models');
+const { Product } = require('../models');
+const { User } = require('../models');
 
 const {
   User
@@ -108,64 +113,76 @@ db.once('open', async () => {
   await Product.deleteMany();
 
   const products = await Product.insertMany([{
-      name: 'Commercial Puff Pastry 5kg',
-      description: 'Commercial Puff Pastry 5kg - Vegan',
-      price: 'price on application'
+      name: 'Commercial Puff Pastry',
+      description: '5kg - Vegan',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Commercial Puff Pastry 10kg',
-      description: 'Commercial Puff Pastry 10kg - Vegan',
-      price: 'price on application'
+      name: 'Commercial Puff Pastry',
+      description: '10kg - Vegan',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Premium Puff Pastry 5kg',
-      description: 'Premium Puff Pastry 5kg',
-      price: 'price on application'
+      name: 'Premium Puff Pastry',
+      description: '5kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Butter, Salt, Preservative (202), Dough Conditioner (920), Food Colours (102, 122)'
     },
     {
-      name: 'Premium Puff Pastry 10kg',
-      description: 'Premium Puff Pastry 10kg',
-      price: 'price on application'
+      name: 'Premium Puff Pastry',
+      description: '10kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Butter, Salt, Preservative (202), Dough Conditioner (920), Food Colours (102, 122)'
     },
     {
-      name: 'French Puff Pastry 10kg',
-      description: 'French Puff Pastry 10kg',
-      price: 'price on application'
+      name: 'French Puff Pastry',
+      description: '10kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b), Natural Flavour, Natural Colour (160a)], Water, Butter, Salt, Preservative (202), Food Colours (102, 122), Dough Conditioner (920)'
     },
     {
-      name: 'Butter Puff Pastry 5kg',
-      description: 'Butter Puff Pastry 5kg',
-      price: 'price on application'
+      name: 'Butter Puff Pastry',
+      description: '5kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]),       Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Short Crust Pastry 5kg',
-      description: 'Short Crust Pastry 5kg',
-      price: 'price on application'
+      name: 'Short Crust Pastry',
+      description: '5kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Short Crust Pastry 10kg',
-      description: 'Short Crust Pastry 10kg',
-      price: 'price on application'
+      name: 'Short Crust Pastry',
+      description: '10kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b)], Water, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Savoury Short Crust Pastry 10kg',
-      description: 'Savoury Short Crust Pastry 10kg',
-      price: 'price on application'
+      name: 'Savoury Short Crust Pastry',
+      description: '10kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Margarine [Vegetable Oils & Fats, Water, Salt, Emulsifiers (471, 322 [Soy-derived]), Preservative (202), Acidity Regulator (330), Antioxidant (307b), Natural Flavour, Natural Colour (160a)], Water, Butter, Salt, Preservative (202), Dough Conditioner (920), Food Colours (102, 122)'
     },
     {
-      name: 'Butter Short Crust Pastry 5kg',
-      description: 'Butter Short Crust Pastry 5kg',
-      price: 'price on application'
+      name: 'Butter Short Crust Pastry',
+      description: '5kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Water, Unsalted Butter, Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Pie Base Short Crust Pastry 10kg',
-      description: 'Pie Base Short Crust Pastry 10kg - Vegan',
-      price: 'price on application'
+      name: 'Pie Base Short Crust Pastry',
+      description: '10kg - Vegan',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Water, Margarine [Vegetable Fats & Oils, Emulsifiers (Soy bean lecithin, 471), Antioxidant (307b [Soy bean-derived]), Colour (160a), Water, Salt, Acidity Regulators (331, 330), Flavours], Salt, Preservative (202), Dough Conditioner (920)'
     },
     {
-      name: 'Sweet Crust Pastry 4kg',
-      description: 'Sweet Crust Pastry 4kg',
-      price: 'price on application'
+      name: 'Sweet Crust Pastry',
+      description: '4kg',
+      price: 'price on application',
+      ingredientList: 'Wheat Flour, Butter, Sugar, Eggs, Vanilla Flavour'
     }
   ]);
 

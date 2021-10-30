@@ -18,6 +18,12 @@ const productSchema = new Schema({
   price: {
     type: String,
     required: true
+  },
+
+  ingredientList: {
+    type: String,
+    required: true,
+    trim: true
   }
 });
 

@@ -64,3 +64,6 @@ Live / In development
 
 ## Resources
 * To populate the content in the Product cards: https://stackoverflow.com/questions/40195058/populate-material-ui-card-component-in-react-project
+
+* Nodemailer: 
+https://w3collective.com/react-contact-form/
