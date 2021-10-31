@@ -6,11 +6,12 @@ const Input = styled.input `
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid ${color.secondary};
+    border: 2px solid ${color.secondary};
 	border-radius: ${shape.borderRadius};
     box-sizing: border-box;
-	background: ${color.primary};
-	color: ${color.textPastry};
+	background: ${color.backgroundMedium};
+	color: ${color.secondary};
+    font-weight: 4;
 	letter-spacing: 0.1rem;
 
 	&:hover {

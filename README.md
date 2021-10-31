@@ -29,27 +29,38 @@ I WANT a website that presents our brand in a positive & professional way,
 SO THAT new & existing customers can see our product range & make contact with us digitally & we can build a database of customers.
 ```
 
-## Screenshot - to do
-![Screenshot of user adding details to the queries for the README file in the terminal.](./develop/screenshotJPG).
-    
+## Screenshot
+![Screenshot of homepage of website.](./client/src/images/home-page-screenshot.JPG).
     
 ## Installation - to do
 
 
     
-## Usage - to complete
-On opening the wesite, the user will be presented with a home page with a login/signup option to be allowed access to the full website.  There is a Contact page with a series of quesions for the user allowing him/her to submit enquiries to the business which will be converted into an e-mail format.  In the back end, this information will be added to the Customer database.
+## Usage
+On opening the wesite, the user will be presented with a home page with a login/signup option to be allowed access to the full website.  There is a Contact page with a series of questions for the user allowing him/her to submit enquiries to the business which will be converted into an e-mail format.  In the back end, this information will be added to the Customer database.
+
+## Technologiues Used 
+* Wireframes for concept development
+* MERN stack – MongoDB/Express.js/React/Node.js
+* Heroku for deployment
+* GitHub
+* Styled-components
+* MUI components
+* Stripe
+* Nodemailer
 
 ## Future Upgrades
 The development of this website will be ongoing in order to continue to improve and to be dynamic, offering additional information for our customers over time.  Future upgrades will continue:
-* Professional photos
-* Better look & feel
-* Input from customers & Marketeers for improvements in functionality
+* Debugging Nodemailer 
+* Adding professional photos
+* Redesigning for a better look & feel
+* Requesting input from customers & Marketeers for improvements in functionality
 * Automating some processes such as email communication
-* Seamless interaction with existing Xero accounting software
+* Activating Stripe for online sales
+* Connecting to existing Xero accounting software
 
-## Status - to do
-Live / In development
+## Status
+In development
 
 ## URLs
 * The URL of the deployed application:  https://rachel-project-3.herokuapp.com/
@@ -60,10 +71,3 @@ Live / In development
 * Email: rachel.brain@internode.on.net
 * LinkedIn: https://www.linkedin.com/in/rachel-brain-89570930
 * GitHub: https://github.com/rachel-brain
-
-
-## Resources
-* To populate the content in the Product cards: https://stackoverflow.com/questions/40195058/populate-material-ui-card-component-in-react-project
-
-* Nodemailer: 
-https://w3collective.com/react-contact-form/

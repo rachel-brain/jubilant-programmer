@@ -1,5 +1,3 @@
-// TEST
-
 import {
     gql
 } from '@apollo/client';
@@ -42,10 +40,10 @@ export const QUERY_ENQUIRIES = gql `
 
 export const QUERY_SINGLE_ENQUIRY = gql `
   query getSingleEnquiry($enquiryId: ID!) {
-    tquiry(enquiryId: $enquiryId) {
+    enquiry(enquiryId: $enquiryId) {
       _id
       enquiryText
-      enquiryAuthor
+      user
       createdAt
       enquiries {
         _id

@@ -1,5 +1,3 @@
-// TEST
-
 import {
     gql
 } from '@apollo/client';

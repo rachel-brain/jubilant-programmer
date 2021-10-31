@@ -15,6 +15,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
 	${commonHeadingStyles}
 	font-size: 2.4rem;
+	color: #0392cf;
 `;
 
 const H3 = styled.h3`
@@ -24,7 +25,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
 	${commonHeadingStyles}
-	font-size: 1.8rem;
+	font-size: 1.3rem;
 `;
 
 const P = styled.p`

@@ -30,7 +30,7 @@ function Contact () {
       <H3>Note that we currently only deliver within the state of Victoria, Australia.</H3>
       <H3>Whether you are an existing customer or not, please get in touch using the form below.</H3>
       <br />
-      <form onSubmit={handleFormSubmit}>
+      <form method='POST' action='send' onSubmit={handleFormSubmit}>
       <div className='flex-row space-between my-2'>
         <label htmlFor="name">Your name: </label>
         <Input
