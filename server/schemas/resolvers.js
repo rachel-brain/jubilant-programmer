@@ -5,7 +5,8 @@ const {
 const {
   User,
   Product,
-  Category,
+  Channel,
+  Enquiry,
   Order
 } = require('../models');
 
@@ -13,7 +14,7 @@ const {
   signToken
 } = require('../utils/auth');
 
-// THIS IS WHERE I ADD STRIPE!!! NEED TO CHANGE THIS TOKEN?
+// THIS IS WHERE I ADD STRIPE! NEED TO CHANGE THIS TOKEN?
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {

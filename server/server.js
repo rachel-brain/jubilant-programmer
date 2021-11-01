@@ -48,15 +48,3 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
-
-
-// For nodemailer route
-const bodyParser = require('body-parser');
-// handlebars?
-const nodemailer = require('nodemailer');
-
-app.get('/', (req, res) => {
-  res.send('Hello');
-});
-
-app.listen(5000, () => console.log('Server started ...'));

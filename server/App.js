@@ -1,3 +1,4 @@
+// FUTURE UPGRADE: FIX THE BUGS IN THIS CODE AND GET THE CONTACT US FORM TO WORK
 // FUTURE UPGRADE: CHANGE EMAIL ADDRESS TO: pastry.master@optusnet.com.au
 
 const express = require('express');
