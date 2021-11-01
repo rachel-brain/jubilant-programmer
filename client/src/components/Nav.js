@@ -33,7 +33,7 @@ const NavigationItem = styled.li`
 	a {
 		color: ${color.textSunset};
 		text-decoration: none;
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 
 	&:hover {

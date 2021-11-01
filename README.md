@@ -32,9 +32,13 @@ SO THAT new & existing customers can see our product range & make contact with u
 ## Screenshot
 ![Screenshot of homepage of website.](./client/src/images/home-page-screenshot.JPG).
     
-## Installation - to do
+## Installation
+* npm start - to install node modules
+* npm run seed - to seed the database
+* npm run dev - to run the website on a local host
 
-
+Once deployed on Heroku, a user needs only to open the following link to open the website:
+    https://rachel-project-3.herokuapp.com/
     
 ## Usage
 On opening the wesite, the user will be presented with a home page with a login/signup option to be allowed access to the full website.  There is a Contact page with a series of questions for the user allowing him/her to submit enquiries to the business which will be converted into an e-mail format.  In the back end, this information will be added to the Customer database.

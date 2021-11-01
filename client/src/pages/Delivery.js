@@ -1,4 +1,5 @@
 import React from 'react';
+import van from '../images/vw-van-photo.JPG';
 
 import { Container } from "../components/Container";
 import { Footer } from '../components/Footer';
@@ -13,6 +14,10 @@ const Delivery = () => {
         We deliver to Melbourne Metro areas from Monday to Friday.
         Contact us to determine which day of the week we deliver to your area. 
       </P>
+      <br />
+      <div className='photo'>
+        <img src={ van } height={300} width={600} alt='vw transporter refrigerated van with pm logo' />
+      </div>
       <br />
       <H2>Not based in Melbourne Metro?</H2>
       <P className='delivery-blurb'>

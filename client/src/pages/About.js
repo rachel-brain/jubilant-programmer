@@ -26,9 +26,9 @@ const About = () => {
         <LI>Simple ingredients</LI>
         <LI>Sourced locally</LI>
         <LI>Consistent quality</LI>
-        <LI>Manufactured 4 days per week</LI>
+        <LI>Manufactured 5 days per week</LI>
         <LI>Fast turn-around on order</LI>
-        <LI>Once thawed, our pastry has a 7-day shelf-life</LI>
+        <LI>Once thawed, our pastry has a 5-day shelf-life</LI>
       </ul>
       <Footer alignContent='center' />
     </Container>
